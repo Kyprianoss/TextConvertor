@@ -51,7 +51,7 @@ void convertToASCII(string letter)
 
 
 int main()
-{   cout<<"TextConvertor"<<"Choose what you want to do:"<<endl<<"Text to binary: b"<<endl<<"Text to ASCII: a"<<endl<<"[b/a]: ";
+{   cout<<"TextConvertor"<<endl<<"Choose what you want to do:"<<endl<<"Text to binary: b"<<endl<<"Text to ASCII: a"<<endl<<"[b/a]: ";
     cin>>options;
     if (options == 'b') {
     cout<<"Enter text to be converted to binary (placing a space in the text will cause errors):"<<endl;
