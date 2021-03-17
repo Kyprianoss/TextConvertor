@@ -1,4 +1,5 @@
-BinConvert
+TextConvertor
+
 It converts text to binary numbers. Features:
 - Option to select convert method (text to binary, text to ASCII)
 - Option to save console output to a text file
