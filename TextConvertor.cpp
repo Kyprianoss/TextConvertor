@@ -3,6 +3,7 @@
 #include <bitset>
 #include <fstream>
 #include <windows.h>
+#include <chrono>
 
 using namespace std;
 
@@ -12,9 +13,13 @@ char options;
 string plainText;
 
 void exitconsole() {
-    char exitcons;
-    cout<<endl<<endl<<"You can now close this window"<<endl;
-    cin>>exitcons;
+    cout<<endl<<"Console will automaticly close in 5 seconds. If you have selected to save the file please do not close the console";
+    chrono::steady_clock::time_point tend = chrono::steady_clock::now() //
+                                               + chrono::seconds(5);    //
+    while (chrono::steady_clock::now() < tend)                          // Give some time to user to read the file path if they have selected yes
+    {                                                                   // Closing the console before 5 seconds when selected yes will cause the file to not
+        //                                                              // save its data
+    }
 }
 
 void convertToASCII(string letter)
@@ -51,7 +56,7 @@ void convertToASCII(string letter)
 
 
 int main()
-{   cout<<"TextConvertor"<<endl<<"Choose what you want to do:"<<endl<<"Text to binary: b"<<endl<<"Text to ASCII: a"<<endl<<"[b/a]: ";
+{   cout<<"TextConvertor"<<"Choose what you want to do:"<<endl<<"Text to binary: b"<<endl<<"Text to ASCII: a"<<endl<<"[b/a]: ";
     cin>>options;
     if (options == 'b') {
     cout<<"Enter text to be converted to binary (placing a space in the text will cause errors):"<<endl;
