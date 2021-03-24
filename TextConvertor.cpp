@@ -14,11 +14,11 @@ string plainText;
 
 void exitconsole() {
     cout<<endl<<"Console will automaticly close in 5 seconds.";
-    chrono::steady_clock::time_point tend = chrono::steady_clock::now() //
-                                               + chrono::seconds(5);    //
-    while (chrono::steady_clock::now() < tend)                          // Give some time to user to read the file path if they have selected yes
-    {                                                                   // Closing the console before 5 seconds when selected yes will cause the file to not
-        //                                                              // save its data
+    chrono::steady_clock::time_point tend = chrono::steady_clock::now() 
+                                               + chrono::seconds(5);    
+    while (chrono::steady_clock::now() < tend)                          
+    {                                                                   
+        //                                                              
     }
 }
 
